@@ -1,0 +1,21 @@
+{
+  "settings": {
+    "unit": {
+      "label": "Service unit",
+      "description": "systemd --user unit to watch and toggle (without the .service suffix)"
+    },
+    "toggle_command": {
+      "label": "Toggle command",
+      "description": "Command executed when the tile is clicked"
+    },
+    "label": {
+      "label": "Tile label",
+      "description": "Text shown under the tile"
+    },
+    "icon": {
+      "label": "Tile icon",
+      "description": "Glyph name shown on the tile"
+    }
+  },
+  "title": "Proxy Tunnel Toggle"
+}

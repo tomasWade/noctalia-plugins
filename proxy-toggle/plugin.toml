@@ -1,0 +1,48 @@
+id = "haotianyu/proxy-toggle"
+name = "Proxy Tunnel Toggle"
+version = "1.1.0"
+plugin_api = 43
+author = "haotianyu"
+license = "MIT"
+dependencies = []
+tags = ["network", "proxy", "systemd", "vpn"]
+icon = "world"
+description = "Stateful control-center toggle tile for a systemd --user tunnel service (e.g. a sing-box TUN). Lights up when the tunnel is up, click to switch."
+
+[[setting]]
+key = "unit"
+type = "string"
+label_key = "settings.unit.label"
+description_key = "settings.unit.description"
+default = "proxy-tunnel"
+
+[[setting]]
+key = "toggle_command"
+type = "string"
+label_key = "settings.toggle_command.label"
+description_key = "settings.toggle_command.description"
+default = "proxy-tunnel-toggle"
+
+[[setting]]
+key = "label"
+type = "string"
+label_key = "settings.label.label"
+description_key = "settings.label.description"
+default = "Proxy"
+
+[[setting]]
+key = "icon"
+type = "glyph"
+label_key = "settings.icon.label"
+description_key = "settings.icon.description"
+default = "world"
+
+# 后台探测 systemd 服务状态，发布到插件共享 state。
+[[service]]
+id = "watcher"
+entry = "service.luau"
+
+# 控制中心磁贴：颜色显示隧道开关状态，点击执行 toggle 命令。
+[[shortcut]]
+id = "toggle"
+entry = "shortcut.luau"

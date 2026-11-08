@@ -1,0 +1,21 @@
+{
+  "settings": {
+    "unit": {
+      "label": "服务单元",
+      "description": "要监视和开关的 systemd --user 服务（不含 .service 后缀）"
+    },
+    "toggle_command": {
+      "label": "切换命令",
+      "description": "点击磁贴时执行的命令"
+    },
+    "label": {
+      "label": "磁贴文字",
+      "description": "显示在磁贴下方的文字"
+    },
+    "icon": {
+      "label": "磁贴图标",
+      "description": "磁贴使用的图标名"
+    }
+  },
+  "title": "全局代理开关"
+}
