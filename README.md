@@ -5,7 +5,7 @@ repo (or a local clone) and enable the plugins you want:
 
 ```sh
 noctalia msg plugins source add noctalia-plugins path /path/to/noctalia-plugins
-noctalia msg plugins enable haotianyu/proxy-toggle
+noctalia msg plugins enable tomasWade/proxy-toggle
 ```
 
 ## proxy-toggle
@@ -24,13 +24,13 @@ TUN setup (any `proxy / VPN / tunnel` unit works).
 
 ```toml
 [[control_center.shortcuts]]
-type = "haotianyu/proxy-toggle:toggle"
+type = "tomasWade/proxy-toggle:toggle"
 ```
 
 ### Settings
 
 Settings are edited under **Settings → Plugins** (gear icon) or via
-`[plugin_settings."haotianyu/proxy-toggle"]` in Noctalia's state settings.
+`[plugin_settings."tomasWade/proxy-toggle"]` in Noctalia's state settings.
 
 | Key              | Default               | Description                                    |
 | ---------------- | --------------------- | ---------------------------------------------- |
