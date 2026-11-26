@@ -1,0 +1,43 @@
+{
+  "title": "Octl Agents",
+  "tooltip": {
+    "offline": "octl daemon unreachable",
+    "empty": "No sessions"
+  },
+  "summary": {
+    "waiting": "waiting",
+    "errored": "errored",
+    "retrying": "retrying",
+    "running": "running",
+    "idle": "idle"
+  },
+  "panel": {
+    "title": "Agent Sessions",
+    "online": "live",
+    "offline": "daemon offline",
+    "offline_body": "octl daemon unreachable — start it with `octl --daemon`.",
+    "empty": "No sessions.",
+    "waiting": "Waiting for you",
+    "errored": "Errors",
+    "running": "Running",
+    "idle": "Idle"
+  },
+  "settings": {
+    "interval_ms": {
+      "label": "Poll interval (ms)",
+      "description": "How often to query the octl daemon, in milliseconds (500–60000, default 2000)"
+    },
+    "glyph": {
+      "label": "Bar glyph",
+      "description": "Glyph shown on the bar"
+    },
+    "busy_color": {
+      "label": "Busy color",
+      "description": "Color of the glyph and count while agents are running"
+    },
+    "alert_color": {
+      "label": "Alert color",
+      "description": "Color when sessions wait for approval or have errored"
+    }
+  }
+}

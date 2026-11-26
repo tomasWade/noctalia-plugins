@@ -1,0 +1,59 @@
+id = "tomaswade/octl-agents"
+name = "Octl Agents"
+version = "1.0.0"
+plugin_api = 43
+author = "tomaswade"
+license = "MIT"
+dependencies = ["octl"]
+tags = ["ai", "indicator", "bar", "development"]
+icon = "brain"
+description = "Live opencode agent status from the octl daemon: running / waiting-approval / errored counts on the bar, with a grouped session panel."
+
+[[setting]]
+key = "interval_ms"
+type = "string"
+label_key = "settings.interval_ms.label"
+description_key = "settings.interval_ms.description"
+default = "2000"
+
+[[setting]]
+key = "glyph"
+type = "glyph"
+label_key = "settings.glyph.label"
+description_key = "settings.glyph.description"
+default = "brain"
+
+[[setting]]
+key = "busy_color"
+type = "color"
+label_key = "settings.busy_color.label"
+description_key = "settings.busy_color.description"
+default = "primary"
+
+[[setting]]
+key = "alert_color"
+type = "color"
+label_key = "settings.alert_color.label"
+description_key = "settings.alert_color.description"
+default = "error"
+
+# Headless poller: runs `octl query snaps --json` and publishes the aggregated
+# snapshot to shared plugin state as "snap".
+[[service]]
+id = "watcher"
+entry = "service.luau"
+
+# Bar widget: dim glyph when idle, colored count while busy / needs attention.
+[[widget]]
+id = "status"
+entry = "widget.luau"
+
+# Session panel: sessions grouped by state. Toggle with:
+#   noctalia msg panel-toggle tomaswade/octl-agents:sessions
+[[panel]]
+id = "sessions"
+entry = "panel.luau"
+width = 480
+height = 520
+placement = "floating"
+position = "center"

@@ -1,0 +1,43 @@
+{
+  "title": "Octl Agents",
+  "tooltip": {
+    "offline": "octl daemon 不可达",
+    "empty": "没有会话"
+  },
+  "summary": {
+    "waiting": "等批准",
+    "errored": "出错",
+    "retrying": "重试",
+    "running": "运行",
+    "idle": "空闲"
+  },
+  "panel": {
+    "title": "Agent 会话",
+    "online": "实时",
+    "offline": "daemon 离线",
+    "offline_body": "octl daemon 不可达——用 `octl --daemon` 启动。",
+    "empty": "没有会话。",
+    "waiting": "等你处理",
+    "errored": "出错",
+    "running": "运行中",
+    "idle": "空闲"
+  },
+  "settings": {
+    "interval_ms": {
+      "label": "轮询间隔（毫秒）",
+      "description": "查询 octl daemon 的频率，毫秒（500–60000，默认 2000）"
+    },
+    "glyph": {
+      "label": "bar 图标",
+      "description": "bar 上显示的图标"
+    },
+    "busy_color": {
+      "label": "运行中颜色",
+      "description": "有 agent 运行时图标和数字的颜色"
+    },
+    "alert_color": {
+      "label": "警示颜色",
+      "description": "有会话等批准或出错时的颜色"
+    }
+  }
+}
